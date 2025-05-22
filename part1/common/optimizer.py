@@ -62,7 +62,7 @@ class AdaGrad:
 
 
 class RMSprop:
-    def __init__(self,lr=0.01,decay_rate=0.99)
+    def __init__(self,lr=0.01,decay_rate=0.99):
         self.lr = lr
         self.decay_rate = decay_rate
         self.h = None

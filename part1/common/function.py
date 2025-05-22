@@ -1,4 +1,4 @@
-import numpy as py
+import numpy as np
 
 def identity_function(x):
     return x
@@ -25,7 +25,7 @@ def relu_grad(x):
 
 def softmax(x):
     x = x - np.max(x, axis=-1, keepdims=True) #オーバーフロー対策
-    y = np.exp(x) / np.sum(np.exp(x), axis=-1, keepdim=True)
+    y = np.exp(x) / np.sum(np.exp(x), axis=-1, keepdims=True)
     return y
 
 def sum_squared_error(y,t):
@@ -42,7 +42,7 @@ def cross_entropy_error(y,t):
 
     batch_size = y.shape[0]
 
-    loss = -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7) / batch_size
+    loss = -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7) ) / batch_size
 
     return loss
 

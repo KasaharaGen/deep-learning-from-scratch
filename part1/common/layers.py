@@ -74,7 +74,7 @@ class SoftmaxWithLoss:
     def forward(self,x,t):
         self.t = t
         self.y = softmax(x)
-        self.loss = cross_entropy(self.y,self.t)
+        self.loss = cross_entropy_error(self.y,self.t)
         return self.loss
 
     def backward(self,dout=1):
@@ -84,7 +84,7 @@ class SoftmaxWithLoss:
         else:
             dx = self.y.copy()
             dx[np.arange(batch_size),self.t] -= 1
-            dx =dx / bach_size
+            dx =dx / batch_size
         return dx
 
 
@@ -108,13 +108,13 @@ class BatchNormalization:
         self.input_shape = x.shape
         if x.ndim != 2:
             N,C,H,W = x.shape
-            x = x.shape(N,-1)
+            x = x.reshape(N,-1)
 
         out = self.__forward(x,train_flg)
 
         return out.reshape(*self.input_shape)
 
-     def __forward(self, x, train_flg):
+    def __forward(self, x, train_flg):
         if self.running_mean is None:
             N, D = x.shape
             self.running_mean = np.zeros(D)
