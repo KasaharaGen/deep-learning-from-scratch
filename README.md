@@ -4,11 +4,16 @@
 書籍「ゼロから作るディープラーニング」シリーズをもとにプロジェクトに取り組む。
 
 ## リポジトリ構成
-# part1
-「ゼロから作るDeep Learning　-Pythonで学ぶディープラーニングの理論と実装-」を参考にnumpyを用いた深層学習の実装を行いmnistデータセットを用いた画像分類を実装している。実装モデルはDNNとCNNである。　
+### part1：[./part1](./part1)
+- 書籍：「ゼロから作るDeep Learning ❶」
+- 内容：NumPyによるDNN／CNNの実装、MNIST分類
+- 特徴:誤差逆伝搬法や最適化などもすべてスクラッチから実装
 
-# part2
-「ゼロから作るDeep Learning ❷ -自然言語処理編」を参考に自然言語処理に関する技術をnumpyを用いて実装を行っている。
+### part2：[./part2](./part2)
+- 書籍：「ゼロから作るDeep Learning ❷」
+- 内容：単語分散表現、RNN、Seq2Seqモデル、Attentionなど
 
-# part3
-「ゼロから作るDeep Learning ❸　-フレームワーク編」を参考にPytorchやTensorFlowなどの既存ディープラーニングフレームワークを模倣したフレームワークをnumpyを用いた実装を行っている。
+### part3：[./part3](./part3)
+- 書籍：「ゼロから作るDeep Learning ❸」
+- 内容：DeZero風フレームワーク、演算グラフ・自動微分・再帰構造の構築
+- 特徴：`Variable`, `Function`, `Trainer` など抽象構造を自作
