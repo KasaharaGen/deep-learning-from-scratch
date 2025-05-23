@@ -52,11 +52,10 @@
 python -m venv venv
 source venv/bin/activate
 
-プロジェクトはAnaconda環境を使用
 
 # 依存ライブラリ（NumPy, matplotlib など）
 pip install -r requirements.txt
 
 # 実行例（part1）
-cd part1
-python train_mnist.py
+cd part1/app
+python mnist_multilayer.py
