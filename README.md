@@ -24,38 +24,10 @@
 ### part2：[./part2](./part2)
 - 書籍：「ゼロから作るDeep Learning ❷」
 - 内容：単語分散表現（word2vec）、RNN、Seq2Seq、Attention
-- 特徴：自然言語処理に必要な系列データ処理と中間表現の獲得方法を学習
+- 特徴：自然言語処理に必要な系列データ処理と中間表現の獲得方法をスクラッチで実装しながら学習 　　　
 
-### part3：[./part3](./part3)
+### part3：[./part3](./part3)(予定)
 - 書籍：「ゼロから作るDeep Learning ❸」
 - 内容：PyTorch/TensorFlow風のミニDLフレームワークをNumPyで模倣
 - 特徴：`Variable`, `Function`, `Trainer` などを抽象的に構成し、動的な演算グラフ・自動微分の理解を深める
 
----
-
-## 成果例
-
-| モデル | 内容 |
-|--------|------|
-| DNN | MNIST分類（精度98%以上） |
-| CNN | conv → pooling → flatten → softmax での画像認識 |
-| word2vec | 単語の類似度可視化（cos類似度＋t-SNE） |
-| Seq2Seq | 単語レベルのエンコーダ・デコーダ構築 |
-| DeZero | 逆伝播可能な演算グラフによるMLP学習（自作） |
-
----
-
-## 実行方法
-
-```bash
-# Python仮想環境推奨
-python -m venv venv
-source venv/bin/activate
-
-
-# 依存ライブラリ（NumPy, matplotlib など）
-pip install -r requirements.txt
-
-# 実行例（part1）
-cd part1/app
-python mnist_multilayer.py
